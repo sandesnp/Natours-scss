@@ -38,10 +38,7 @@
 	}
 	&__list {
 		width: 100%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absCenter;
 		list-style: none;
 		text-align: center;
 	}
@@ -95,7 +92,7 @@
 		&::before,
 		&::after {
 			width: 3rem;
-			height: 2px;
+			height: 2px; //three lines icon
 			background-color: darken($color-gray-dark, 30%);
 			display: inline-block;
 			transition: all 0.2s;
