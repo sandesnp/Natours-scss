@@ -9,10 +9,11 @@
 	transition: all 0.5s;
 	opacity: 0;
 	visibility: hidden;
+	
 
 	&__content {
 		width: 75%;
-		// height: 50rem; removed since content dicates the container's height
+		//  height: 90%; //removed since content dicates the container's height
 		background-color: rgba($color: #ffffff, $alpha: 1);
 		border-radius: 3px;
 		box-shadow: 0 0 1rem rgba($color: $color-black, $alpha: 0.5);
@@ -23,21 +24,38 @@
 		transform: translate(-50%, -50%) scale(0.5);
 		transition: all 0.5s cubic-bezier(0.82, -0.12, 0, 1.14);
 		display: table;
+
+		@include respond(tab-port){
+			display: block;
+		}
 	}
 
 	&__left {
 		width: 33.3333%;
 		display: table-cell;
+		@include respond(tab-port){
+			width: 100%;
+			display: block;
+		}
 	}
 	&__right {
 		width: 66.6666%;
 		display: table-cell;
 		vertical-align: middle;
 		padding: 3rem 5rem;
+		@include respond(tab-port){
+			width: 100%;
+			display: block;
+			
+		}
 	}
 	&__img {
 		display: block;
 		width: 100%;
+		@include respond(tab-port){
+			width: 49%;
+			display:inline-block;
+		}
 	}
 	&__text {
 		font-size: 1.4rem;
@@ -52,6 +70,9 @@
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
+		@include respond(tab-port){
+			column-count: 1;
+		}
 	}
 
 	&:target {

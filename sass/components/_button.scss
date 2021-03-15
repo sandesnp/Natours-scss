@@ -43,6 +43,7 @@
 		}
 	}
 	&:hover::after {
+		//has to be below hover and focus
 		transform: scaleX(1.4) scaleY(1.5);
 		opacity: 0;
 	}
@@ -84,6 +85,7 @@
 		transform: translateY(-2px);
 	}
 	&:active {
+		//has to be below hover and focus
 		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
 		transform: translateY(0px);
 	}

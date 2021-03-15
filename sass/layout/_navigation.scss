@@ -14,6 +14,14 @@
 		text-align: center; //for icons
 		cursor: pointer;
 		z-index: 999;
+		@include respond(tab-port){
+			top:4rem;
+			right:4rem;
+		}
+		@include respond(phone){
+			top:3rem;
+			right:3rem;
+		}
 	}
 	&__background {
 		height: 6rem;
@@ -25,6 +33,15 @@
 		background-image: radial-gradient($primary-color, $color-primary-dark);
 		transition: all 0.8s cubic-bezier(0.49, -0.55, 0.5, 1.65);
 		z-index: 997;
+
+		@include respond(tab-port){
+			top:4.5rem;
+			right:4.5rem;
+		}
+		@include respond(phone){
+			top:3.5rem;
+			right:3.5rem;
+		}
 	}
 	&__nav {
 		opacity: 0;

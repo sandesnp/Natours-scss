@@ -1,15 +1,32 @@
 .row {
 	max-width: $grid-width;
 	margin: 0 auto;
-	&:not(:last-child) {
+	@include respond(tab-port){
+		max-width: 50rem;
+		padding:0 3rem;
+	}
+
+	&:not(:last-child) { //selects all row class in the document except the last one
 		margin-bottom: $gutter-vertical;
+		@include respond(tab-port){
+			margin-bottom: $gutter-vertical-small;
+		}
 	}
 	@include clearfix;
-	[class^='col-'] {
+	[class^='col-'] { //selects all col class 
 		float: left;
-		&:not(:last-child) {
+		&:not(:last-child) { //selects all col class except the last one
 			margin-right: $gutter-horizontal;
+
+			@include respond(tab-port){
+				margin-right: 0;
+				margin-bottom: $gutter-vertical-small;
+			}
 		}
+		@include respond(tab-port){
+			width:100% !important;
+		}
+		
 	}
 
 	.col-1-of-2 {
