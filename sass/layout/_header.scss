@@ -6,11 +6,29 @@
 			rgba($color-primary-light, 0.8),
 			rgba($color-primary-dark, 0.8)
 		),
-		url('../img/hero.jpg'); //since the compiled css is located in css/main.css
+		url('../img/hero-small.jpg'); //since the compiled css is located in css/main.css
 	background-size: cover;
 	background-position: top;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	//if screen is high res type and width is 600px or more then
+	//or
+	//if screen res is low and width is 2000px or more
+	//dot per inch -->  as in how many dots are needed to print a image per inch
+	@media only screen and (min-resolution:192dpi) and (min-width:37.5em), //comma means or
+		only screen and (-webkit-min-resolution:192dpi) and (min-width:37.5em),
+		only screen and (min-width:125em){ 
+		background: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url('../img/hero.jpg'); 
+		background-size: cover;
+		background-position: top;
+
+	}
 
 	@include respond(phone){
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

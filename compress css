@@ -1,0 +1,9 @@
+install concat npm package
+
+concat or join data of multiple files into one 
+"concat:css": "concat -o css/style.concat.css css/icon-font.css css/main.css"  -> css/style.concat.css created
+
+using minify extension minify the file size by going to that file and pressing f1 and selecting minify. 
+-> css/style.concat.min.css created
+
+rename it styles.css and change the link in html files to styles.css then deploy.

@@ -4,11 +4,17 @@
 	width: 100%;
 	left: 0;
 	top: 0;
-	background-color: rgba($color-black, 0.8);
+	background-color: rgba($color-primary-dark, 0.8);
 	z-index: 1000;
 	transition: all 0.5s;
 	opacity: 0;
 	visibility: hidden;
+	
+	@supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-primary-dark, 0.3);
+	}
 	
 
 	&__content {
