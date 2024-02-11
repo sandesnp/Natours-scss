@@ -16,7 +16,8 @@
 
 //Media query manager
 /*
-0-600px;  Phone
+0-400px: Small-phone
+400-600px:  Phone
 600-900px: Tablet portrait mode
 900-1200px: Tablet landscape mode
 1200-1800px: desktop --> no need to specify for this because this is default
@@ -36,6 +37,9 @@ $breakpoint arguement choices:
 - big desktop
 */
 @mixin respond($breakpoint){
+	@if $breakpoint == small-phone {
+    		@media only screen and (max-width: 25em) {@content};
+  	}
 	@if $breakpoint == phone{
 		@media only screen and (max-width:37.5em){@content};
 	}
