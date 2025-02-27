@@ -23,7 +23,7 @@
 1200-1800px: desktop --> no need to specify for this because this is default
 1800px + : big desktop
 
-ORDER: Base + typography > general layout + grid > page layout > components
+ORDER: Base + typography > general layout (global selectors) + grid > page layout (start with gaps, margins, padding) > components
 */
 
 @mixin respond-phone{
